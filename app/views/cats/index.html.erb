@@ -19,7 +19,7 @@
   <tbody>
     <% @cats.each do |cat| %>
       <tr>
-        <td><%= cat.picture %></td>
+        <td><%= image_tag cat.picture_url(:thumb) if cat.picture.present? %></td>
         <td><%= cat.date_spotted %></td>
         <td><%= cat.location %></td>
         <td><%= cat.colour %></td>
