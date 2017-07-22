@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>picture</strong>
+  <%= image_tag(@cat.picture_url, :width => 600) if @cat.picture.present? %>
+
+</p>
+
+<p>
+  <strong>Date spotted:</strong>
+  <%= @cat.date_spotted %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cat.location %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @cat.colour %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cat.description %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @cat.rating %>
+</p>
+
+<p>
+  <strong>Would pat again:</strong>
+  <%= @cat.would_pat_again %>
+</p>
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>

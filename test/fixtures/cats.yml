@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picture: MyString
+  date_spotted: 2017-07-22
+  location: MyString
+  colour: MyString
+  description: MyString
+  rating: 1
+  would_pat_again: false
+
+two:
+  picture: MyString
+  date_spotted: 2017-07-22
+  location: MyString
+  colour: MyString
+  description: MyString
+  rating: 1
+  would_pat_again: false

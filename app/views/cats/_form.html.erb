@@ -1,0 +1,52 @@
+<%= form_with(model: cat, local: true) do |form| %>
+  <% if cat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cat.errors.count, "error") %> prohibited this cat from being saved:</h2>
+
+      <ul>
+      <% cat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :cat_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_spotted %>
+    <%= form.date_select :date_spotted, id: :cat_date_spotted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :cat_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colour %>
+    <%= form.text_field :colour, id: :cat_colour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :cat_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating, id: :cat_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :would_pat_again %>
+    <%= form.check_box :would_pat_again, id: :cat_would_pat_again %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
